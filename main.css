@@ -2,32 +2,28 @@
   box-sizing: border-box;
 }
 
-.bd-placeholder-img {
-  font-size: 1.125rem;
-  text-anchor: middle;
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: rgb(135, 209, 135);
+  color: rgb(13, 94, 13);
 }
 
-@media (min-width: 768px) {
-  .bd-placeholder-img-lg {
-    font-size: 3.5rem;
-  }
+button,
+input[type='text'] {
+  padding: 5px;
 }
 
-#app-title {
-  background-color: rgb(6, 116, 64);
-}
-.navbar {
-  background-color: green;
+button:hover {
+  cursor: pointer;
 }
 
-.app-container {
-  margin-top: 15%;
-  margin-left: 10%;
-  margin-right: 10%;
+.container {
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-h1 {
-  color: rgb(171, 197, 24);
+.error-message {
+  color: red;
 }
 
 .hidden {
