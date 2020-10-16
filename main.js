@@ -10,6 +10,10 @@ function formatQueryParams(params) {
 function displayResults(responseJson, maxResults) {
   console.log(responseJson);
 
+  if (maxResults === '') {
+    maxResults = 10;
+  }
+
   $('.js-error').empty();
   $('.results-list').empty();
 
@@ -27,6 +31,10 @@ function getParks(baseUrl, stateArr, maxResults, apiKey) {
     stateCode: stateArr,
     limit: maxResults,
   };
+
+  if (params.limit === '') {
+    params.limit = 10;
+  }
 
   const queryString = formatQueryParams(params);
   const url = baseUrl + '?' + queryString + '&api_key=' + apiKey;
